@@ -1,0 +1,154 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{ragged2e}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Manuel}{Roby Culasso}{Estudiante de Ingenieria}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \fbox{\includegraphics[height=5.5cm,keepaspectratio]{Foto Carnet.jpeg}}
+\end{center}
+\bigskip
+\bigskip
+\bg{cvgreen}{white}{Acerca de mi}\\[0.5em]
+
+{\footnotesize
+
+Estudiante de Ingeniería Industrial, con interés en seguir desarrollando habilidades académicas, analíticas y de comunicación.}
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+
+
+Nacionalidad: Argentino
+
+Idiomas: Español e ingles
+\bigskip
+
+\bg{cvgreen}{white}{Intereses}\\[0.5em]
+
+Ingenieria
+
+Fisica
+
+Idiomas
+
+\vfill
+\flushleft
+
+\infobubble{\faAt}{cvgreen}{white}{manuelroby98}
+\infobubble{\faGithub}{cvgreen}{white}{Manuel-Roby}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\vspace{16em}
+\section*{Perfil Academico}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2024-Actualidad}{Estudiante de Ingenieria Industrial}{Universidad Nacional de Cuyo}{Mendoza \color{cvred}}{Formación universitaria en curso, con interés en el desarrollo académico y profesional en el área de la ingeniería.}{} \\
+    \cvevent{2019-2023}{Secundario completo}{Formación con Bachillerato Internacional (IB)}{San Jorge \color{cvred}}{}{}
+\end{tabular}
+\vspace{16em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Titulos}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2018}{Titulo primario completo}{}{Colegio San Jorge \color{headerblue}}{}{} \\
+    \cvdegree{2023}{Titulo secundario completo}{}{Colegio San Jorge \color{headerblue}}{}{} \\
+    \cvdegree{2023}{Bachillerato Internacional (IB)}{}{Colegio San Jorge \color{headerblue}}{}{}
+\end{tabular}
+\end{minipage}\hfill
+\vspace{10em}
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Habilidades}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    Adaptabilidad \\
+    Responsabilidad \\
+    Organizacion\\
+    Trabajo en equipo
+\end{tabular}
+\bigskip
+
+\section*{Lenguajes}
+\begin{tabular}{l | ll}
+\textbf{Español} & C2 & {\phantom{x}\footnotesize Primera lengua} \\
+
+\textbf{Ingles} & C2 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+
+\end{paracol}
+
+\end{document}
